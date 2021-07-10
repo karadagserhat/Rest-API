@@ -1,0 +1,62 @@
+@BASE_URL = http://localhost:3000/api
+
+
+###
+GET {{BASE_URL}}/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGU5OTBkODUxZjU3OTJhZjA5NDM5ZTkiLCJpYXQiOjE2MjU5MTk3NjAsImV4cCI6MTYyNTkyMzM2MH0.oqiAcxqTylep11GWEF_7SHOo5rzbtiaBTeT2v0DuZ28
+
+
+###
+POST {{BASE_URL}}/users
+Content-Type: application/json
+
+{
+    "isim":"serhat2",
+    "email":"serhat22@outlook.com",
+    "userName":"karadag22",
+    "sifre":"123456"
+
+}
+
+###
+POST {{BASE_URL}}/users/giris
+Content-Type: application/json
+
+{
+    "email":"serhat@outlook.com",
+    "sifre":"123456"
+
+}
+
+###
+PATCH {{BASE_URL}}/users/60e9914c51f5792af09439f1
+Content-Type: application/json
+
+{
+    "isim": "sinan"
+}
+
+###
+PATCH {{BASE_URL}}/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGU5OTBkODUxZjU3OTJhZjA5NDM5ZTkiLCJpYXQiOjE2MjU5MTk3NjAsImV4cCI6MTYyNTkyMzM2MH0.oqiAcxqTylep11GWEF_7SHOo5rzbtiaBTeT2v0DuZ28
+
+{
+    "isim": "Srht",
+    "sifre": "1234567"
+}
+
+###
+DELETE {{BASE_URL}}/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGU5ODg2NTBiMThhOTIzZDA5MGIyOTUiLCJpYXQiOjE2MjU5MTc1ODMsImV4cCI6MTYyNTkyMTE4M30.sbZZ-n4J4VFUdc5GVdy_BsSbCQMNc01CJX6XTo86k2k
+
+###
+DELETE {{BASE_URL}}/users/60e9914c51f5792af09439f1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGU5OTBkODUxZjU3OTJhZjA5NDM5ZTkiLCJpYXQiOjE2MjU5MTk3NjAsImV4cCI6MTYyNTkyMzM2MH0.oqiAcxqTylep11GWEF_7SHOo5rzbtiaBTeT2v0DuZ28
+
+
+###
+GET {{BASE_URL}}/users/deleteAll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGU5ODM2Y2FmYzI4MDNhMjhiOTY2MzciLCJpYXQiOjE2MjU5MTY4OTMsImV4cCI6MTYyNTkyMDQ5M30.6B-NIm_qH2g7ZtNAsxrbPiShi-hTpIJZ1IZKDnDPOZc
+
